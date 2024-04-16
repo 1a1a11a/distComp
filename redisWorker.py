@@ -279,7 +279,7 @@ class Worker:
     ########### util #############
     def return_most_recent_task(self):
         """
-        if the node is going to OOM, then kill the most recent process and return it to mamager
+        if the node is going to OOM, then kill the most recent process and return it to manager
         """
         try:
             self.lock.acquire()
