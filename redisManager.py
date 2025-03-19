@@ -278,7 +278,6 @@ def move_failed_task_to_todo_task():
 if __name__ == "__main__":
 
     from argparse import ArgumentParser
-    from distutils.util import strtobool
 
     parser = ArgumentParser(description="manage task and worker")
 

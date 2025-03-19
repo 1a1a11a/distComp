@@ -220,6 +220,22 @@ def test_task():
     print(task)
 
 
+def strtobool(value: str) -> bool:
+  """
+  ref: https://docs.python.org/3.9/distutils/apiref.html
+  Convert a string representation of truth to true (1) or false (0).
+  
+  True values are y, yes, t, true, on and 1; false values are n, no, f, false, off and 0. 
+  Raises ValueError if val is anything else.
+  """
+  value = value.lower()
+  if value in ("y", "yes", "on", "1", "true", "t"):
+    return True
+  if value in ("n", "no", "off", "0", "false", "f"):
+    return False
+  raise ValueError(f"invalid truth value {value}")
+
+
 if __name__ == "__main__":
     # test_runner_config()
     # test_task()
